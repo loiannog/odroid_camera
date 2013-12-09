@@ -9,10 +9,11 @@ ifeq ($(UNAME_M),x86_64)
 else ifeq ($(UNAME_M),armv7l)
 	#MVIMPACT_PATH := ../mvIMPACT_acquire-arm-1.12.56
 	MVIMPACT_PATH := ../mvIMPACT_acquire-arm-2.5.4
-	INCS := -I$(MVIMPACT_PATH) -I$(HOME)/armel/include
-	LIBS := -L$(MVIMPACT_PATH)/lib/arm -lmvDeviceManager -lmvPropHandling -lm -pthread -L$(HOME)/armel/lib -ljpeg -lzmq
+        ARM_PATH := ..
+	INCS := -I$(MVIMPACT_PATH) -I$(ARM_PATH)/armel/include
+	LIBS := -L$(MVIMPACT_PATH)/lib/arm -lmvDeviceManager -lmvPropHandling -lm -pthread -L$(ARM_PATH)/armel/lib -ljpeg -lzmq
 	CXX_FLAGS := -O3 -Wall -mfloat-abi=softfp
-	LD_FLAGS := -Wl,-rpath=$(MVIMPACT_PATH)/lib/arm -Wl,-rpath=$(HOME)/armel/lib
+	LD_FLAGS := -Wl,-rpath=$(MVIMPACT_PATH)/lib/arm -Wl,-rpath=$(ARM_PATH)/armel/lib
 else
 	$(error Architecture not supported)
 endif
