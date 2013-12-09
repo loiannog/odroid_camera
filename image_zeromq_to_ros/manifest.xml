@@ -1,0 +1,22 @@
+<package>
+  <description brief="image_zeromq_to_ros">
+
+     image_zeromq_to_ros
+
+  </description>
+  <author>Kartik Mohta</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/image_zeromq_to_ros</url>
+  <depend package="roscpp"/>
+  <depend package="nodelet"/>
+  <depend package="image_transport"/>
+  <depend package="sensor_msgs"/>
+  <depend package="camera_calibration_parsers"/>
+
+  <export>
+    <nodelet plugin="${prefix}/nodelet_plugin.xml"/>
+  </export>
+</package>
+
+

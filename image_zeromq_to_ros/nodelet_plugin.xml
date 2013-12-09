@@ -1,0 +1,7 @@
+<library path="lib/libimage_zeromq_to_ros">
+  <class name="image_zeromq_to_ros/ImageZeroMQToROS" type="ImageZeroMQToROS" base_class_type="nodelet::Nodelet">
+    <description>
+      This is nodelet to decompress and publish the JPEG compressed images sent from the robot over ZeroMQ.
+    </description>
+  </class>
+</library>

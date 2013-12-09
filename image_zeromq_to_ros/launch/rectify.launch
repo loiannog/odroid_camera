@@ -1,0 +1,23 @@
+<launch>
+  <node pkg="nodelet"
+    type="nodelet"
+    name="nodelet_manager_camera"
+    args="manager"
+    output="screen"/>
+
+  <node pkg="nodelet"
+        type="nodelet"
+        name="image_zeromq_to_ros"
+        args="load image_zeromq_to_ros/ImageZeroMQToROS nodelet_manager_camera"
+        output="screen">
+    <param name="calibration" value="$(find image_zeromq_to_ros)/config/calib.yml"/>
+  </node>
+  <node pkg="nodelet"
+    type="nodelet"
+    name="rectify"
+    args="load image_proc/rectify nodelet_manager_camera"
+    output="screen">
+    <remap from="image_mono" to="quadcloud/camera/image_raw"/>
+    <remap from="image_rect" to="quadcloud/camera/image_rect"/>
+  </node>
+</launch>

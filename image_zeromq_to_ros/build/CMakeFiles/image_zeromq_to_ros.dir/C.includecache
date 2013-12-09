@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/jpeg_decompress.h
+stdlib.h
+-
+stdint.h
+-
+
+/home/odroid/ros_workspace/rosmake_workspace/image_zeromq_to_ros/src/jpeg_decompress.c
+jpeg_decompress.h
+/home/odroid/ros_workspace/rosmake_workspace/image_zeromq_to_ros/src/jpeg_decompress.h
+stdio.h
+-
+jpeglib.h
+-
+
