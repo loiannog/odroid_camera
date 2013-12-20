@@ -1,0 +1,10 @@
+//-----------------------------------------------------------------------------
+#ifndef InfoH
+#define InfoH InfoH
+//-----------------------------------------------------------------------------
+
+#define COMPANY_NAME wxT("!!company_name!!")
+#define CURRENT_YEAR wxT("!!current_year!!")
+#define VERSION_STRING wxT("!!version_major!!.!!version_minor!!.!!version_release!!.!!version_build!!")
+
+#endif // InfoH
